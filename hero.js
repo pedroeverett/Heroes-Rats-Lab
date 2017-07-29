@@ -18,5 +18,13 @@ Hero.prototype.numberTasks = function() {
   return this.taskList.length;
 }
 
+Hero.prototype.eatFood = function(food) {
+  if(food.name === this.favFood) {
+    this.health += (food.repValue * 1.5);
+  } else {
+    this.health += food.repValue;
+  }
+}
+
 
 module.exports = Hero;
