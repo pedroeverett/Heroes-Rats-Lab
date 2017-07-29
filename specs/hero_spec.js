@@ -64,6 +64,14 @@ describe("Hero", function() {
     hero.addTask(task3);
     hero.sortTasks("urgencyLevel");
     assert.deepEqual(hero.taskList, [task2, task1, task3]);
+  }),
+
+  it("can sort task by reward", function() {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    hero.sortTasks("reward");
+    assert.deepEqual(hero.taskList, [task1, task2, task3]);
   })
 
 
