@@ -13,6 +13,7 @@ describe("Hero", function() {
   var task1;
   var task2;
   var task3;
+  var rat;
 
   beforeEach(function() {
 
@@ -23,6 +24,8 @@ describe("Hero", function() {
     task1 = new Task(1, 5, 5, true);
     task2 = new Task(10, 1, 8, false);
     task3 = new Task(5, 10, 10, false);
+    rat = new Rat("Wee Mouse");
+
   })
 
   it("does hero have a name", function() {
@@ -87,6 +90,12 @@ describe("Hero", function() {
     hero.addTask(task2);
     hero.addTask(task3);
     assert.deepEqual(hero.seeTaskCompletion(false), [task2, task3]);
+  }),
+
+  it("rat touch food and became poisonous and hero reduce health", function() {
+    rat.touchFood(food1);
+    hero.eatFood(food1);
+    assert.equal(hero.health, 90);
   })
 
 })
