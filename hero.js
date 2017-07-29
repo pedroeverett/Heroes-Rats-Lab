@@ -32,5 +32,15 @@ Hero.prototype.sortTasks = function(type) {
   });
 }
 
+Hero.prototype.seeTaskCompletion = function(status) {
+  var newTaskList = [];
+  for (task of this.taskList) {
+    if (task.completed === status) {
+      newTaskList.push(task);
+    }
+  }
+  return newTaskList;
+}
+
 
 module.exports = Hero;
