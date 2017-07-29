@@ -79,7 +79,13 @@ describe("Hero", function() {
     hero.addTask(task2);
     hero.addTask(task3);
     assert.deepEqual(hero.seeTaskCompletion(true), [task1]);
-  })
+  }),
 
+  it("can see uncompleted tasks", function() {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    assert.deepEqual(hero.seeTaskCompletion(false), [task2, task3]);
+  })
 
 })
