@@ -19,9 +19,9 @@ describe("Hero", function() {
     food1 = new Food("Cookie", 10);
     food2 = new Food("Red Peppers", 30);
     food3 = new Food("Chicken", 5);
-    task1 = new Task(1,5, "Ballon", true);
-    task2 = new Task(10,1, "Puppy", false);
-    task3 = new Task(5,10, "Medal", false);
+    task1 = new Task(1,5, 5, true);
+    task2 = new Task(10,1, 8, false);
+    task3 = new Task(5,10, 10, false);
   })
 
   it("does hero have a name", function() {
@@ -48,6 +48,13 @@ describe("Hero", function() {
   it("can eat favFood and health should go up", function() {
     hero.eatFood(food2);
     assert.equal(hero.health, 145); 
+  }),
+
+  it("can sort task by difficulty", function() {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    assert.equal(hero.sortTasks("difficulty"), [task1, task3, task2])
   })
 
 
