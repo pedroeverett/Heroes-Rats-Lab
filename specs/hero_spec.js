@@ -43,6 +43,11 @@ describe("Hero", function() {
   it("can eat food and health should go up", function() {
     hero.eatFood(food1);
     assert.equal(hero.health, 110);
+  }),
+
+  it("can eat favFood and health should go up", function() {
+    hero.eatFood(food2);
+    assert.equal(hero.health, 145); 
   })
 
 
