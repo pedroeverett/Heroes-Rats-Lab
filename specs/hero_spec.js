@@ -33,10 +33,8 @@ describe("Hero", function() {
   }),
 
   it("taskList starts empty", function() {
-    assert.equal(hero.numberTasks, 0);
+    assert.equal(hero.numberTasks(), 0);
   })
-
-
 
 
 })
