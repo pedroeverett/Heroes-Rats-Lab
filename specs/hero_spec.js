@@ -15,7 +15,7 @@ describe("Hero", function() {
 
   beforeEach(function() {
 
-    hero = new Hero("Red", 100, "Red Peppers", "My name is");
+    hero = new Hero("Red", 100, "Red Peppers", "My name is ");
     food1 = new Food("Cookie", 10);
     food2 = new Food("Red Peppers", 30);
     food3 = new Food("Chicken", 5);

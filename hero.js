@@ -6,6 +6,10 @@ var Hero = function (name, health, favFood, talk) {
   this.taskList = [];
 }
 
+Hero.prototype.sayName = function() {
+  return (this.talk + this.name)
+}
+
 Hero.prototype.addTask = function(task) {
   this.taskList.push(task);
 }
