@@ -72,6 +72,13 @@ describe("Hero", function() {
     hero.addTask(task3);
     hero.sortTasks("reward");
     assert.deepEqual(hero.taskList, [task1, task2, task3]);
+  }),
+
+  it("can see completed tasks", function() {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    assert.deepEqual(hero.seeTaskCompletion(true), [task1]);
   })
 
 
