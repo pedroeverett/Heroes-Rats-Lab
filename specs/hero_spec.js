@@ -25,11 +25,15 @@ describe("Hero", function() {
   })
 
   it("does hero have a name", function() {
-    assert.equal(hero.name, "Red")
+    assert.equal(hero.name, "Red");
   }),
 
   it("health starts at 100", function() {
-    assert.equal(hero.health, 100)
+    assert.equal(hero.health, 100);
+  }),
+
+  it("taskList starts empty", function() {
+    assert.equal(hero.numberTasks, 0);
   })
 
 
