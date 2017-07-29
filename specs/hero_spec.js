@@ -1,6 +1,7 @@
 var Hero = require("../hero.js");
 var Food = require("../food.js");
 var Task = require("../task.js");
+var Rat = require("../rat.js");
 var assert = require("assert");
 
 describe("Hero", function() {
