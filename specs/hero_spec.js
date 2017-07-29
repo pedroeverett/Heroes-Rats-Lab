@@ -38,6 +38,11 @@ describe("Hero", function() {
 
   it("taskList starts empty", function() {
     assert.equal(hero.numberTasks(), 0);
+  }),
+
+  it("can eat food and health should go up", function() {
+    hero.eatFood(food1);
+    assert.equal(hero.health, 110);
   })
 
 
